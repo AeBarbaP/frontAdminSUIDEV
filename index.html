@@ -71,20 +71,20 @@
             }
 
             .btn-bd-primary {
-                --bd-violet-bg: #712cf9;
+                /* --bd-violet-bg: #712cf9; */
                 --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
 
                 --bs-btn-font-weight: 600;
-                --bs-btn-color: var(--bs-white);
-                --bs-btn-bg: var(--bd-violet-bg);
-                --bs-btn-border-color: var(--bd-violet-bg);
-                --bs-btn-hover-color: var(--bs-white);
-                --bs-btn-hover-bg: #6528e0;
+                /* --bs-btn-color: var(--bs-white);
+                --bs-btn-bg: var(--bd-violet-bg); */
+                /* --bs-btn-border-color: var(--bd-violet-bg); */
+                /* --bs-btn-hover-color: var(--bs-white); */
+                /* --bs-btn-hover-bg: #6528e0;
                 --bs-btn-hover-border-color: #6528e0;
-                --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+                --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb); */
                 --bs-btn-active-color: var(--bs-btn-hover-color);
-                --bs-btn-active-bg: #5a23c8;
-                --bs-btn-active-border-color: #5a23c8;
+                /* --bs-btn-active-bg: #5a23c8;
+                --bs-btn-active-border-color: #5a23c8; */
             }
 
             .bd-mode-toggle {
@@ -98,6 +98,7 @@
 
         <!-- Custom styles for this template -->
         <link href="navbars-offcanvas.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     </head>
     <body>
         <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -114,43 +115,12 @@
             <symbol id="sun-fill" viewBox="0 0 16 16">
                 <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
             </symbol>
+            <symbol id="menu" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </symbol>
         </svg>
 
-        <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-            <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-                    id="bd-theme"
-                    type="button"
-                    aria-expanded="false"
-                    data-bs-toggle="dropdown"
-                    aria-label="Toggle theme (auto)">
-                <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-                <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-                <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                    <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-                    Light
-                    <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                    <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-                    Dark
-                    <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                    <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-                    Auto
-                    <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                    </button>
-                </li>
-            </ul>
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Responsive offcanvas navbar</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
@@ -182,21 +152,34 @@
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                             </li>
-                        </ul>
-                        <form class="d-flex mt-3 mt-lg-0" role="search">
+                        </ul> -->
+                        <!-- <form class="d-flex mt-3 mt-lg-0" role="search">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
+                        </form> -->
+                    <!-- </div>
                 </div>
             </div>
-        </nav>
+        </nav> -->
         <nav class="navbar bg-body-tertiary" aria-label="Light offcanvas navbar">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Light offcanvas navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight" aria-label="Toggle navigation">
+                    <svg class="bi me-2 mt-1 " width="1.5em" height="1.5em"><use href="#menu"></use></svg>
+                </a>
+                <div class="dropdown ms-2">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                        <!-- <strong>mdo</strong> -->
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+                <div class="vr"></div>
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Offcanvas</h5>
@@ -214,18 +197,54 @@
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown
                                 </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                    <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
+                <div class="dropdown bottom-0 end-0 ">
+                    <button class="btn btn-bd-primary dropdown-toggle d-flex align-items-center"
+                            id="bd-theme"
+                            type="button"
+                            aria-expanded="false"
+                            data-bs-toggle="dropdown"
+                            aria-label="Toggle theme (auto)">
+                        <svg class="bi my-1 theme-icon-active text-dark" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-start shadow" aria-labelledby="bd-theme-text">
+                        <li>
+                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                            Light
+                            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                            Dark
+                            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                            Auto
+                            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="vr"></div>
+                <!-- <a class="navbar-brand" href="#">Light offcanvas navbar</a> -->
             </div>
         </nav>
         <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
