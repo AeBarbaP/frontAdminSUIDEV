@@ -16,10 +16,19 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
         <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/dist/css/timeline.css" rel="stylesheet">
 
         <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+        
         <style>
+            * {
+                font-family: 'Comfortaa', sans-serif;
+            }
             .bd-placeholder-img {
                 font-size: 1.125rem;
                 text-anchor: middle;
@@ -129,42 +138,78 @@
                 </a>
                 <div class="dropdown ms-2">
                     <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                        <img src="assets/img/avatar.jpg" alt="" width="35" height="35" class="rounded-circle me-2">
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                        <li><a class="dropdown-item" href="#">New project...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <ul class="dropdown-menu dropdown-menu text-small shadow text-end">
+                        <li><a class="dropdown-item" href="#">Editar mi perfil <i class="bi bi-gear ms-2" style="font-size: 25px;"></i></a></li>
+                        <!-- <li><a class="dropdown-item" href="#">Profile</a></li> -->
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        <li><a class="dropdown-item" href="#">Cerrar Sesión <i class="bi bi-box-arrow-in-right ms-2" style="font-size: 25px;"></i></a></li>
                     </ul>
                 </div>
                 <div class="vr"></div>
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Offcanvas</h5>
+                        <img src="assets/img/LogoIncBio.png" class="ms-2" style="height: 4rem;" alt="">
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
+                    <div class="container">
+                        <h5 class="offcanvas-title mt-3" id="offcanvasNavbarLightLabel">Administrador</h5>
+                    </div>
+
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link" aria-current="page" href="">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                                <a class="nav-link" href="">SUIDEV - Padrón PCD</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
+                                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Últimas Actividades registradas
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                    <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="timeline p-4 blockt mb-4">
+                                            <div class="tl-item active">
+                                                <div class="tl-dot b-warning"></div>
+                                                <div class="tl-content">
+                                                    <div class="">@twitter thanks for you appreciation and @google thanks for you appreciation</div>
+                                                    <div class="tl-date text-muted mt-1">13 june 18</div>
+                                                </div>
+                                            </div>
+                                            <div class="tl-item">
+                                                <div class="tl-dot b-primary"></div>
+                                                <div class="tl-content">
+                                                    <div class="">Do you know how Google search works.</div>
+                                                    <div class="tl-date text-muted mt-1">45 minutes ago</div>
+                                                </div>
+                                            </div>
+                                            <div class="tl-item">
+                                                <div class="tl-dot b-danger"></div>
+                                                <div class="tl-content">
+                                                    <div class="">Thanks to <a href="#" data-abc="true">@apple</a>, for iphone 7</div>
+                                                    <div class="tl-date text-muted mt-1">1 day ago</div>
+                                                </div>
+                                            </div>
+                                            <div class="tl-item">
+                                                <div class="tl-dot b-danger"></div>
+                                                <div class="tl-content">
+                                                    <div class="">Order placed <a href="#" data-abc="true">@eBay</a> you will get your products</div>
+                                                    <div class="tl-date text-muted mt-1">1 Week ago</div>
+                                                </div>
+                                            </div>
+                                            <div class="tl-item">
+                                                <div class="tl-dot b-warning"></div>
+                                                <div class="tl-content">
+                                                    <div class="">Learn how to use <a href="#" data-abc="true">Google Analytics</a> to discover vital information about your readers.</div>
+                                                    <div class="tl-date text-muted mt-1">3 days ago</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -205,17 +250,46 @@
                 </div>
                 <div class="vr"></div>
                 <!-- <a class="navbar-brand" href="#">Light offcanvas navbar</a> -->
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle  ms-3 me-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Beneficiarios 
+                        <i class="bi bi-person-rolodex ms-2" style="font-size: 25px;"></i>
+                    </a>
+                    <ul class="dropdown-menu text-end">
+                        <li><a class="dropdown-item" href="#">Reportes de Beneficiarios <i class="bi bi-folder2-open ms-2" style="font-size: 25px;"></i></a></li>
+                        <li><a class="dropdown-item" href="#">Reportes de Apoyos <i class="bi bi-clipboard2-check ms-2" style="font-size: 25px;"></i></a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Gráficas <i class="bi bi-graph-up-arrow ms-2" style="font-size: 20px;"></i></a></li>
+                    </ul>
+                </div>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle ms-2 me-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Usuarios
+                        <i class="bi bi-people-fill ms-2" style="font-size: 25px;"></i>
+                    </a>
+                    <ul class="dropdown-menu text-end">
+                        <li><a class="dropdown-item" href="#">Reporte Individual <img src="assets/img/grafico-de-lineas.png" class="ms-2" style="height: 2em; width: auto;" alt=""></a></li>
+                        <li><a class="dropdown-item" href="#">Reporte General <img src="assets/img/reporte.png"  style="height: 2.5em; width: auto;" alt=""></a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Agregar Usuario<i class="bi bi-person-plus ms-2" style="font-size: 30px;"></i></a></li>
+                        <li><a class="dropdown-item" href="#">Gestión de Usuarios <i class="bi bi-person-gear ms-2" style="font-size: 30px;"></i></a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <div class="container text-end align-items-end justify-content-end"><!-- inicio container principal-->
             <h3>Dashboard</h3>  
             <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-end">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Library</li>
-            </ol>
+                <ol class="breadcrumb justify-content-end">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                </ol>
             </nav>
-
             <div class="row">
                 <div class="col-8">
                     <div class="card mb-3" style="width: 100%; height: 100%;">
@@ -225,39 +299,35 @@
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
-                      
                 </div>
                 <div class="col-4">
                     <div class="row">
                         <div class="col-12 mb-3">
                             <div class="card mb-3" style="width: 100%; height: 100%;">
                                 <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
-                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
                                 </div>
-                              </div>
-                              
+                            </div>
                         </div>
                         <div class="col-6">
                             <div class="card mb-3" style="width: 100%; height: 100%;">
                                 <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
-                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
                                 </div>
-                              </div>
-                              
+                            </div>
                         </div>
                         <div class="col-6">
                             <div class="card mb-3" style="width: 100%; height: 100%;">
                                 <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
-                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
                                 </div>
-                              </div>
-                              
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -270,31 +340,28 @@
                             <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
                                 <div class="card-header">Header</div>
                                 <div class="card-body">
-                                  <h5 class="card-title">Primary card title</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <h5 class="card-title">Primary card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                              </div>
-                              
+                            </div>
                         </div>
                         <div class="col-12">
                             <div class="card text-bg-warning mb-3" style="max-width: 18rem;">
                                 <div class="card-header">Header</div>
                                 <div class="card-body">
-                                  <h5 class="card-title">Warning card title</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <h5 class="card-title">Warning card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                              </div>
-                              
+                            </div>
                         </div>
                         <div class="col-12">
                             <div class="card text-bg-danger" style="max-width: 18rem;">
                                 <div class="card-header">Header</div>
                                 <div class="card-body">
-                                  <h5 class="card-title">Danger card title</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <h5 class="card-title">Danger card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                              </div>
-                              
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -318,7 +385,7 @@
                                             <th scope="col" class="text-end"><i class="bi bi-people"></i></th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="usuariosTabla">
                                             <tr>
                                                 <th scope="row"><i class="bi bi-three-dots-vertical"></i></th>
                                                 <td>Ana</td>
@@ -327,7 +394,7 @@
                                                 <td>AEBarba</td>
                                                 <td class="text-end">
                                                     <a href="#" class="text-end" aria-expanded="false">
-                                                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle">
+                                                        <img src="assets/img/avatar.jpg" alt="" width="32" height="32" class="rounded-circle">
                                                     </a>
                                                 </td>
                                             </tr>
@@ -339,7 +406,7 @@
                                                 <td>AEBarba</td>
                                                 <td class="text-end">
                                                     <a href="#" class="text-end" aria-expanded="false">
-                                                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle">
+                                                        <img src="assets/img/avatar.jpg" alt="" width="32" height="32" class="rounded-circle">
                                                     </a>
                                                 </td>
                                             </tr>
@@ -351,7 +418,7 @@
                                                 <td>AEBarba</td>
                                                 <td class="text-end">
                                                     <a href="#" class="text-end" aria-expanded="false">
-                                                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle">
+                                                        <img src="assets/img/avatar.jpg" alt="" width="32" height="32" class="rounded-circle">
                                                     </a>
                                                 </td>
                                             </tr>
@@ -363,7 +430,7 @@
                                                 <td>AEBarba</td>
                                                 <td class="text-end">
                                                     <a href="#" class="text-end" aria-expanded="false">
-                                                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle">
+                                                        <img src="assets/img/avatar.jpg" alt="" width="32" height="32" class="rounded-circle">
                                                     </a>
                                                 </td>
                                             </tr>
@@ -375,23 +442,19 @@
                                                 <td>AEBarba</td>
                                                 <td class="text-end">
                                                     <a href="#" class="text-end" aria-expanded="false">
-                                                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle">
+                                                        <img src="assets/img/avatar.jpg" alt="" width="32" height="32" class="rounded-circle">
                                                     </a>
                                                 </td>
                                             </tr>
-                                            
                                         </tbody>
                                     </table>
                                     <!-- tabla -->
                                 </div>
-                                
                             </div>
-                            
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="row mt-4">
                 <div class="col-12">
                     <div class="card mb-3" style="width: 100%; height: 100%;">
@@ -403,12 +466,12 @@
                             <table class="table p-1">
                                 <thead>
                                     <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Actividad</th>
-                                    <th scope="col">Avance</th>
-                                    <th scope="col">Departamento</th>
-                                    <th scope="col">Usuario</th>
-                                    <th scope="col" class="text-end"><i class="bi bi-people"></i></th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Actividad</th>
+                                        <th scope="col">Avance</th>
+                                        <th scope="col">Departamento</th>
+                                        <th scope="col">Usuario</th>
+                                        <th scope="col" class="text-end"><i class="bi bi-people"></i></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -420,7 +483,7 @@
                                         <td>AEBarba</td>
                                         <td class="text-end">
                                             <a href="#" class="text-end" aria-expanded="false">
-                                                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle">
+                                                <img src="assets/img/avatar.jpg" alt="" width="32" height="32" class="rounded-circle">
                                             </a>
                                         </td>
                                     </tr>
@@ -432,7 +495,7 @@
                                         <td>AEBarba</td>
                                         <td class="text-end">
                                             <a href="#" class="text-end" aria-expanded="false">
-                                                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle">
+                                                <img src="assets/img/avatar.jpg" alt="" width="32" height="32" class="rounded-circle">
                                             </a>
                                         </td>
                                     </tr>
@@ -444,7 +507,7 @@
                                         <td>AEBarba</td>
                                         <td class="text-end">
                                             <a href="#" class="text-end" aria-expanded="false">
-                                                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle">
+                                                <img src="assets/img/avatar.jpg" alt="" width="32" height="32" class="rounded-circle">
                                             </a>
                                         </td>
                                     </tr>
@@ -456,7 +519,7 @@
                                         <td>AEBarba</td>
                                         <td class="text-end">
                                             <a href="#" class="text-end" aria-expanded="false">
-                                                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle">
+                                                <img src="assets/img/avatar.jpg" alt="" width="32" height="32" class="rounded-circle">
                                             </a>
                                         </td>
                                     </tr>
@@ -468,31 +531,19 @@
                                         <td>AEBarba</td>
                                         <td class="text-end">
                                             <a href="#" class="text-end" aria-expanded="false">
-                                                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle">
+                                                <img src="assets/img/avatar.jpg" alt="" width="32" height="32" class="rounded-circle">
                                             </a>
                                         </td>
                                     </tr>
-                                    
                                 </tbody>
                             </table>
                             <!-- tabla -->
                         </div>
-                        
                     </div>
                 </div>
             </div>
-              
         </div><!-- fin container principal-->
-
-        
-        
     </body><!--aqui-->
-    <footer>
-        <div class="container-fluid bg-light mt-4 mb-0">
-            <p class="ms-2 p-3">Powered by <a href="">AnnyBarba@zacatecas.gob.mx</a></p>
-        </div>
-    </footer>
-    
-    </html>
+</html>
     
     
