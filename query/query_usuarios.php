@@ -1,13 +1,14 @@
 <?php
 
     session_start();
-    include ("../prcd/qc.php");
+    include ("../prcd/qc/qc.php");
 
     date_default_timezone_set('America/Mexico_City');
     setlocale(LC_TIME, 'es_MX.UTF-8');
     $fecha_actual = strftime("%Y-%m-%d,%H:%M:%S");
 
-    $sql = "SELECT users.username as userName, log_registro.tipo_dato as tipoDato, COUNT(log_registro.tipo_dato) as contarDatos FROM users INNER JOIN log_registro ON users.username = log_registro.usr GROUP BY users.username, log_registro.tipo_dato";
+    $sql = "SELECT users.username AS userName, log_registro.tipo_dato AS tipoDato, COUNT(log_registro.tipo_dato) AS
+    contarDatos FROM users INNER JOIN log_registro ON users.username = log_registro.usr GROUP BY users.username, log_registro.tipo_dato";
 
     $resultadoSql = $conn->query($sql);
 
@@ -26,7 +27,7 @@
             <td>'.$row['contarDatos'].'</td>
             <td>'.$row['userName'].'</td>
             <td>'.$row['userName'].'</td>
-             <td class="text-end">
+            <td class="text-end">
                 <a href="#" class="text-end" aria-expanded="false">
                     <img src="assets/img/avatar.jpg" alt="" width="32" height="32" class="rounded-circle">
                 </a>
@@ -35,5 +36,5 @@
         ';
     }
 
-     
+    
 ?>
