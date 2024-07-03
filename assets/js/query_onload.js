@@ -1,8 +1,8 @@
 function usuariosQuery(){
     $.ajax({
-        url: 'query_usuarios.php',
+        url: 'query/query_usuarios.php',
         type: 'POST',
-        dataType: 'HTML',
+        dataType: 'html',
         success: function(response){
             $('#usuariosTabla').html(response);
         }
