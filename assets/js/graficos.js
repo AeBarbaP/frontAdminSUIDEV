@@ -33,24 +33,82 @@ function conteoGeneral(){
                   type: 'bar',
                   data: {
                     labels: [
-                      'Nuevos registros',
-                      'Actualizar expedientes',
-                      'Tarjetones entregados',
-                      'Expedientes Actualizados'
+                      'Ene',
+                      'Feb',
+                      'Mzo',
+                      'Abr',
+                      'May',
+                      'Jun',
+                      'Jul',
+                      'Ago',
+                      'Sep',
+                      'Oct',
+                      'Nov',
+                      'Dic',
                     ],
                     datasets: [{
                       data: [
-                        filas,
+                        
                         filasExp,
-                        filasTar,
-                        filasAct
+                        
                       ],
                       lineTension: 0,
-                      backgroundColor: '',
-                      borderColor: '#007bff',
-                      borderWidth: 4,
-                      pointBackgroundColor: '#007bff'
-                    }]
+                      backgroundColor: '#3399ff',
+                      borderColor: '#3399ff',
+                      borderWidth: 1,
+                      pointBackgroundColor: '#3399ff',
+                      borderRadius: 40,
+                      borderSkipped: false,
+                      responsive: true,
+                      maintainAspectRatio: false,
+                    },
+                    {
+                      data: [
+                        filas,
+                        
+                      ],
+                      lineTension: 0,
+                      backgroundColor: '#3399ff',
+                      borderColor: '#3399ff',
+                      borderWidth: 1,
+                      pointBackgroundColor: '#3399ff',
+                      borderRadius: 40,
+                      borderSkipped: false,
+                      responsive: true,
+                      maintainAspectRatio: false,
+                    },
+                    {
+                      data: [
+                        filasTar,
+                        
+                      ],
+                      lineTension: 0,
+                      backgroundColor: '#3399ff',
+                      borderColor: '#3399ff',
+                      borderWidth: 1,
+                      pointBackgroundColor: '#3399ff',
+                      borderRadius: 40,
+                      borderSkipped: false,
+                      responsive: true,
+                      maintainAspectRatio: false,
+                    },
+                    {
+                      data: [
+                        filasAct,
+                        
+                      ],
+                      lineTension: 0,
+                      backgroundColor: '#3399ff',
+                      borderColor: '#3399ff',
+                      borderWidth: 1,
+                      pointBackgroundColor: '#3399ff',
+                      borderRadius: 40,
+                      borderSkipped: false,
+                      responsive: true,
+                      maintainAspectRatio: false,
+                    }
+                  ],
+                  
                   },
                   options: {
                     plugins: {

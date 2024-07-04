@@ -27,7 +27,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
 
         <!-- js de gráficos -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> -->
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
         <!-- js de carga -->
         <script src="assets/js/query_onload.js"></script>
@@ -293,11 +295,11 @@
             </div>
         </nav>
         <div class="container text-end align-items-end justify-content-end"><!-- inicio container principal-->
-            <h3>Dashboard</h3>  
+            <h3>Administrador</h3>  
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-end">
                     <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                    <li class="breadcrumb-item active" aria-current="page">Administrador</li>
                 </ol>
             </nav>
             <div class="row">
@@ -318,7 +320,7 @@
                             <div class="card mb-3" style="width: 100%; height: 100%;">
                                 <div class="card-body">
                                     <h5 class="card-title strong">Captura de expedientes</h5>
-                                    <p class="card-text">Expedientes capturados la presente semana</p>
+                                    <p class="card-text text-muted">Expedientes capturados de la semana</p>
                                     <div class="row">
                                         <div class="col-6">
                                             <h1 class="text-start p-3">
@@ -402,9 +404,15 @@
                         <div class="col-12">
                             <div class="card mb-3" style="width: 100%; height: 100%;">
                                 <div class="card-body">
-                                    <h5 class="card-title">Usuarios</h5>
-                                    <p class="text-muted small text-secondary mt-0">Registrados de Junio 1 de 2024 - Diciembre 31 de 2024</p>
-                                    <a href="#" class="btn btn-primary btn-small align-items-start">Agregar</a>
+                                    <div class="row mb-3">
+                                        <div class="col-3 text-start">
+                                            <button class="btn btn-secondary btn-sm mt-2 text-white" style="color: #bfc7d1;">Exportar<i class="bi bi-download ms-3"></i></button>
+                                        </div>
+                                        <div class="col-9 text-end">
+                                            <h4 class="card-title">Actividad Reciente</h4>
+                                            <p class="text-muted small text-secondary mt-0">de Junio 1 de 2024 - Diciembre 31 de 2024</p>
+                                        </div>
+                                    </div>
                                     <!-- tabla -->
                                     <table class="table p-1">
                                         <thead>
@@ -432,9 +440,15 @@
                 <div class="col-12">
                     <div class="card mb-3" style="width: 100%; height: 100%;">
                         <div class="card-body">
-                            <h5 class="card-title">Traffic</h5>
-                            <p class="text-muted small text-secondary mt-0">last week</p>
-                            <a href="#" class="btn btn-primary btn-small align-items-start">Agregar</a>
+                            <div class="row">
+                                <div class="col-3 text-start">
+                                    <button class="btn btn-secondary btn-sm text-white" style="color: #bfc7d1;"><span class="mt-2">Agregar nuevo</span><i class="bi bi-person-plus my-auto ms-3"></i></button>
+                                </div>
+                                <div class="col-9 text-end">
+                                    <h5 class="card-title">Usuarios Registrados</h5>
+                                    <p class="text-muted small text-secondary mt-0"></p>
+                                </div>
+                            </div>
                             <!-- tabla -->
                             <table class="table p-1">
                                 <thead>

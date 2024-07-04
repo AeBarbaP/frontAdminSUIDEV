@@ -8,7 +8,7 @@
     $fecha_actual = strftime("%Y-%m-%d,%H:%M:%S");
 
     $sql = "SELECT users.username AS userName, log_registro.tipo_dato AS tipoDato, COUNT(log_registro.tipo_dato) AS
-    contarDatos FROM users INNER JOIN log_registro ON users.username = log_registro.usr GROUP BY users.username, log_registro.tipo_dato";
+    contarDatos FROM users INNER JOIN log_registro ON users.username = log_registro.usr GROUP BY users.username, log_registro.tipo_dato LIMIT 9";
 
     $resultadoSql = $conn->query($sql);
 
@@ -24,7 +24,11 @@
 
         echo'
             <td>'.$rowTipo['nombre'].'</td>
-            <td>'.$row['contarDatos'].'</td>
+            <td>
+                <div class="progress mt-3" style="height: 5px;">
+                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </td>
             <td>'.$row['userName'].'</td>
             <td>'.$row['userName'].'</td>
             <td class="text-end">
