@@ -1,27 +1,71 @@
-const xValues = [100,200,300,400,500,600,700,800,900,1000];
+function conteoGeneral(){
 
-new Chart("myChart", {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [{ 
-      data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
-      borderColor: "red",
-      borderRadius: 10,
-      fill: false
-    }, { 
-      data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
-      borderColor: "green",
-      borderRadius: 10,
-      fill: false
-    }, { 
-      data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
-      borderColor: "blue",
-      borderRadius: 10,
-      fill: false
-    }]
-  },
-  options: {
-    legend: {display: false}
-  }
-});
+  $.ajax({
+      type:"POST",
+      url:"query/queryconteoGeneral.php",
+      dataType: "json",
+      cache: false,
+          success: function(response)
+          { 
+              var jsonData = JSON.parse(JSON.stringify(response));
+              var filas = jsonData.filas;
+              var filasExp = jsonData.filasExp;
+              var filasTar = jsonData.filasTar;
+              var filasAct = jsonData.filasAct;
+
+              console.log("Nuevos registros: "+filas);
+              document.getElementById("expNews2").innerHTML = filas;
+              console.log("Entrega credenciales: "+filasExp);
+              document.getElementById("credEnt").innerHTML = filasExp;
+              console.log("Tarjetones entregados: "+filasTar);
+              document.getElementById("filasTar").innerHTML = filasTar;
+              // console.log("Expedientes actualizados: "+filasAct);
+              // document.getElementById("expNews2").innerHTML = filas
+
+              (() => {
+                'use strict'
+              
+                // Graphs
+                const ctx = document.getElementById('myChart')
+                
+                // eslint-disable-next-line no-unused-vars
+                const myChart = new Chart(ctx, {
+                  type: 'bar',
+                  data: {
+                    labels: [
+                      'Nuevos registros',
+                      'Actualizar expedientes',
+                      'Tarjetones entregados',
+                      'Expedientes Actualizados'
+                    ],
+                    datasets: [{
+                      data: [
+                        filas,
+                        filasExp,
+                        filasTar,
+                        filasAct
+                      ],
+                      lineTension: 0,
+                      backgroundColor: '',
+                      borderColor: '#007bff',
+                      borderWidth: 4,
+                      pointBackgroundColor: '#007bff'
+                    }]
+                  },
+                  options: {
+                    plugins: {
+                      legend: {
+                        display: false
+                      },
+                      tooltip: {
+                        boxPadding: 3
+                      }
+                    }
+                  }
+                })
+              })()
+              
+          }
+      });
+
+}
