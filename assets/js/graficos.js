@@ -1,129 +1,114 @@
-function conteoGeneral(){
-
+function conteoGeneral() {
   $.ajax({
-      type:"POST",
-      url:"query/queryconteoGeneral.php",
+      type: "POST",
+      url: "query/query_meses_annio.php",
       dataType: "json",
       cache: false,
-          success: function(response)
-          { 
-              var jsonData = JSON.parse(JSON.stringify(response));
-              var filas = jsonData.filas;
-              var filasExp = jsonData.filasExp;
-              var filasTar = jsonData.filasTar;
-              var filasAct = jsonData.filasAct;
+      success: function(response) {
+          var jsonData = JSON.parse(JSON.stringify(response));
+          console.log('Respuesta JSON:', jsonData);
+          var filas = 0;
+          var filasExp = 0;
+          var filasTar = 0;
+          var filasAct = 0;
 
-              console.log("Nuevos registros: "+filas);
-              document.getElementById("expNews2").innerHTML = filas;
-              console.log("Entrega credenciales: "+filasExp);
-              document.getElementById("credEnt").innerHTML = filasExp;
-              console.log("Tarjetones entregados: "+filasTar);
-              document.getElementById("filasTar").innerHTML = filasTar;
-              // console.log("Expedientes actualizados: "+filasAct);
-              // document.getElementById("expNews2").innerHTML = filas
+          if (Array.isArray(jsonData)) {
+              console.log('Número de elementos en el array:', jsonData.length);
+              var datosTabla = Array(12).fill(0).map(() => ({ credencial: 0, tarjeton: 0, expediente: 0 }));
 
-              (() => {
-                'use strict'
-              
-                // Graphs
-                const ctx = document.getElementById('myChart')
-                
-                // eslint-disable-next-line no-unused-vars
-                const myChart = new Chart(ctx, {
+              // Iterar sobre cada elemento en el array
+              for (var i = 0; i < jsonData.length; i++) {
+                  var datosGenerales = jsonData[i];
+                  var mes = datosGenerales.mes - 1; // Convertir el mes a un índice de 0 a 11
+                  var credencial = datosGenerales.credencial;
+                  var tarjeton = datosGenerales.tarjeton;
+                  var expediente = datosGenerales.expediente;
+
+                  console.log('mes:', mes);
+                  console.log('credencial:', credencial);
+                  console.log('tarjeton:', tarjeton);
+                  console.log('expediente:', expediente);
+
+                  // Agregar los datos al arreglo multidimensional
+                  datosTabla[mes] = { credencial, tarjeton, expediente };
+              }
+
+              console.log('datosTabla:', datosTabla);
+
+              // Crear un arreglo para los datos del gráfico
+              var credencialData = datosTabla.map(d => d.credencial);
+              var tarjetonData = datosTabla.map(d => d.tarjeton);
+              var expedienteData = datosTabla.map(d => d.expediente);
+
+              // Crear el gráfico
+              const ctx = document.getElementById('myChart').getContext('2d');
+
+              const myChart = new Chart(ctx, {
                   type: 'bar',
                   data: {
-                    labels: [
-                      'Ene',
-                      'Feb',
-                      'Mzo',
-                      'Abr',
-                      'May',
-                      'Jun',
-                      'Jul',
-                      'Ago',
-                      'Sep',
-                      'Oct',
-                      'Nov',
-                      'Dic',
-                    ],
-                    datasets: [{
-                      data: [
-                        
-                        filasExp,
-                        
+                      labels: [
+                          'Ene', 'Feb', 'Mzo', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic',
                       ],
-                      lineTension: 0,
-                      backgroundColor: '#3399ff',
-                      borderColor: '#3399ff',
-                      borderWidth: 1,
-                      pointBackgroundColor: '#3399ff',
-                      borderRadius: 40,
-                      borderSkipped: false,
-                      responsive: true,
-                      maintainAspectRatio: false,
-                    },
-                    {
-                      data: [
-                        filas,
-                        
+                      datasets: [
+                          {
+                              label: 'Credencial',
+                              data: credencialData,
+                              backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                              borderColor: 'rgba(255, 99, 132, 1)',
+                              borderWidth: 1,
+                              pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+                              borderRadius: 40,
+                              borderSkipped: false,
+                              responsive: true,
+                              maintainAspectRatio: false,
+                          },
+                          {
+                              label: 'Tarjeton',
+                              data: tarjetonData,
+                              backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                              borderColor: 'rgba(54, 162, 235, 1)',
+                              borderWidth: 1,
+                              pointBackgroundColor: 'rgba(54, 162, 235, 1)',
+                              borderRadius: 40,
+                              borderSkipped: false,
+                              responsive: true,
+                              maintainAspectRatio: false,
+                          },
+                          {
+                              label: 'Expediente',
+                              data: expedienteData,
+                              backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                              borderColor: 'rgba(75, 192, 192, 1)',
+                              borderWidth: 1,
+                              pointBackgroundColor: 'rgba(75, 192, 192, 1)',
+                              borderRadius: 40,
+                              borderSkipped: false,
+                              responsive: true,
+                              maintainAspectRatio: false,
+                          }
                       ],
-                      lineTension: 0,
-                      backgroundColor: '#3399ff',
-                      borderColor: '#3399ff',
-                      borderWidth: 1,
-                      pointBackgroundColor: '#3399ff',
-                      borderRadius: 40,
-                      borderSkipped: false,
-                      responsive: true,
-                      maintainAspectRatio: false,
-                    },
-                    {
-                      data: [
-                        filasTar,
-                        
-                      ],
-                      lineTension: 0,
-                      backgroundColor: '#3399ff',
-                      borderColor: '#3399ff',
-                      borderWidth: 1,
-                      pointBackgroundColor: '#3399ff',
-                      borderRadius: 40,
-                      borderSkipped: false,
-                      responsive: true,
-                      maintainAspectRatio: false,
-                    },
-                    {
-                      data: [
-                        filasAct,
-                        
-                      ],
-                      lineTension: 0,
-                      backgroundColor: '#3399ff',
-                      borderColor: '#3399ff',
-                      borderWidth: 1,
-                      pointBackgroundColor: '#3399ff',
-                      borderRadius: 40,
-                      borderSkipped: false,
-                      responsive: true,
-                      maintainAspectRatio: false,
-                    }
-                  ],
-                  
                   },
                   options: {
-                    plugins: {
-                      legend: {
-                        display: false
+                      plugins: {
+                          legend: {
+                              display: true,
+                          },
+                          tooltip: {
+                              boxPadding: 3,
+                          },
                       },
-                      tooltip: {
-                        boxPadding: 3
-                      }
-                    }
-                  }
-                })
-              })()
-              
+                      scales: {
+                          y: {
+                              beginAtZero: true,
+                          },
+                      },
+                  },
+              });
           }
-      });
-
+      },
+      error: function(error) {
+          console.error('Error en la petición AJAX:', error);
+      }
+  });
 }
+
