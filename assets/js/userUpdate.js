@@ -6,4 +6,21 @@ function myFunction() {
     } else {
         x.type = "password";
     }
-} 
+}
+
+function estatusCambio(x,y){
+    var id = x;
+    var estatus = y;
+    
+    $.ajax({
+        url: 'prcd/cambiarEstatus.php',
+        type: 'POST',
+        data: {
+            id: id,
+            estatus: estatus
+        },
+        success: function(response){
+            usuariosQuery();
+        }
+    });
+}

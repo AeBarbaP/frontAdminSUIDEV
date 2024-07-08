@@ -1,6 +1,6 @@
-function usuariosQuery(){
+function usuariosQueryLogs(){
     $.ajax({
-        url: 'query/query_usuarios.php',
+        url: 'query/query_usuarioslog.php',
         type: 'POST',
         dataType: 'html',
         success: function(response){
