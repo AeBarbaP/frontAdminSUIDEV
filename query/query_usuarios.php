@@ -37,7 +37,7 @@
 
         echo'
         <tr>
-            <th scope="row"><i class="bi bi-three-dots-vertical"></i></th>
+            <th scope="row"><a style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#editar"><i class="bi bi-three-dots-vertical"></i></a></th>
             <td>'.$rowPerfil['perfil'].'</td>
             <td>'.$row['fecha_creacion'].'</td>
             <td>'.$fecha_ini.'</td>  /* ultimo login */

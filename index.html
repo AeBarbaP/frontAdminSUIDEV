@@ -34,6 +34,7 @@
         <!-- js de carga -->
         <script src="assets/js/query_onload.js"></script>
         <script src="assets/js/userUpdate.js"></script>
+        <script src="assets/js/reportes.js"></script>
 
         <!-- js jquery cdn -->
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -312,8 +313,9 @@
                         <li><a class="dropdown-item" href="#">Gestión de Usuarios <i class="bi bi-person-gear ms-2" style="font-size: 30px;"></i></a></li>
                     </ul>
                 </div>
-                
-                <h3 class="align-items-end">Administrador</h3>  
+                <div class="nav-item mx-auto">
+                    <h3 class="ms-end">Administrador</h3>  
+                </div>
             </div>
         </nav>
         <div class="container text-end align-items-end justify-content-end"><!-- inicio container principal-->
@@ -427,7 +429,7 @@
                                 <div class="card-body">
                                     <div class="row mb-3">
                                         <div class="col-3 text-start">
-                                            <button class="btn btn-secondary btn-sm mt-2 text-white" style="color: #bfc7d1;">Exportar<i class="bi bi-download ms-2 me-2"></i></button>
+                                            <a class="btn btn-secondary btn-sm mt-2 text-white" type="btn" href="query/excel_usuarioslog.php" style="color: #bfc7d1;" >Exportar<i class="bi bi-download ms-2 me-1"></i></a>
                                         </div>
                                         <div class="col-9 text-end">
                                             <h4 class="card-title">Actividad Reciente</h4>
@@ -463,7 +465,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-3 text-start">
-                                    <button class="btn btn-secondary btn-sm text-white" style="color: #bfc7d1;" onclick="agregarUser()"><span class="mt-2">Agregar nuevo</span><i class="bi bi-person-plus my-auto ms-2 mb-2"></i></button>
+                                    <button class="btn btn-secondary btn-sm text-white" style="color: #bfc7d1;" onclick="agregarUser()"><span class="mt-3">Agregar nuevo</span><i class="bi bi-person-plus my-auto ms-2 mb-2"></i></button>
                                 </div>
                                 <div class="col-9 text-end">
                                     <h5 class="card-title">Usuarios Registrados</h5>
@@ -531,16 +533,17 @@
                         <label class="btn btn-outline-danger" for="btnradio2"><i class="bi bi-x-lg"></i> Inactivo</label>
                     </div>
                 </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-shield-lock-fill"></i></span>
+                    <input type="password" class="form-control" placeholder="Contraseña" aria-label="contraseña" value="" aria-describedby="basic-addon1" name="pwd" id="passW">
+                    <span class="input-group-text" id="eyePwd"><a type="button" style="text-decoration: none;" onclick="myFunction()"><i class="bi bi-eye"></i></a></span>
+                </div>
+                <!-- <input type="checkbox" > Mostrar Password  -->
             </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-shield-lock-fill"></i></span>
-                <input type="password" class="form-control" placeholder="Contraseña" aria-label="contraseña" value="" aria-describedby="basic-addon1" name="pwd" id="passW">
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i> Cancelar</button>
+                <button type="submit" class="btn btn-primary"><i class="bi bi-person-plus"></i> Guardar Cambios</button>
             </div>
-            <input type="checkbox" onclick="myFunction()"> Mostrar Password 
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i> Cancelar</button>
-            <button type="submit" class="btn btn-primary"><i class="bi bi-person-plus"></i> Guardar Cambios</button>
         </div>
     </div>
 </div>
