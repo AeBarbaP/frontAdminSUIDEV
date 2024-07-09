@@ -3,10 +3,9 @@ function myFunction() {
     
     if (x.type === "password") {
         x.type = "text";
-        document.getElementById("eyePwd").innerHTML = <i class="bi bi-eye-slash"></i>;
     } else {
         x.type = "password";
-        document.getElementById("eyePwd").innerHTML = <i class="bi bi-eye"></i>;
+
     }
 }
 

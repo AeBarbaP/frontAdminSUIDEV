@@ -10,7 +10,7 @@
     //$sql = "SELECT users.username AS username, users.perfil AS perfil, users.fecha_creacion AS fecha_c, users.estatus AS estatus, users.nombre AS nombre, fecha_iniciosesion.log_usrlogin AS fecha_login INNER JOIN log_usrlogin ON users.id = log_usrlogin.id_usr ORDER BY fecha_iniciosesion.log_usrlogin ASC";
     //$resultadoSql = $conn->query($sql);
 
-    $sqlQueryUsers ="SELECT * FROM users WHERE estatus = 1";
+    $sqlQueryUsers ="SELECT * FROM users";
     $resultadoQueryUsers = $conn->query($sqlQueryUsers);
 
     while($row = $resultadoQueryUsers->fetch_assoc()){
