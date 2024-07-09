@@ -1,5 +1,7 @@
 <?php
     session_start();
+    /* $usr = $_SESSION['usr']; */
+    $usr = "annaeliza";
 
     date_default_timezone_set('America/Mexico_City');
     setlocale(LC_TIME, 'es_MX.UTF-8');
@@ -12,11 +14,12 @@
     $username = $_POST['username'];
     $pwd = $_POST['pwd'];
     $perfil = $_POST['perfil'];
+    $color = $_POST['color'];
     $estatus = 1; 
     $tipo_dato = 9;
 
 
-    $sqlinsertUsr= "INSERT INTO users(username,pwd,perfil,nombre,fecha_creacion,estatus) VALUES('$username','$pwd','$perfil','$nombre','$fecha_creacion','$estatus')";
+    $sqlinsertUsr= "INSERT INTO users(username,pwd,perfil,nombre,fecha_creacion,estatus,color) VALUES('$username','$pwd','$perfil','$nombre','$fecha_registro','$estatus','$color')";
     $resultadoUsr= $conn->query($sqlinsertUsr);
     
     if($resultadoUsr){

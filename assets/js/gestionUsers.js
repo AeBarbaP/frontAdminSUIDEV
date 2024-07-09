@@ -8,3 +8,7 @@ function usuariosQueryG(){
         }
     });
 }
+
+function refrescarIndex() {
+    window.location.reload();
+}

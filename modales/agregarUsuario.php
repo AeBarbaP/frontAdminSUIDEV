@@ -28,6 +28,8 @@
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-shield-lock-fill"></i></span>
                         <input type="text" class="form-control" placeholder="Contraseña" aria-label="contraseña" aria-describedby="basic-addon1"  name="pwd" id="pwd" required>
+                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-palette"></i></span>
+                        <input type="color" class="form-control form-control-color" placeholder="Asignar color" aria-describedby="basic-addon1"  name="color" id="colorUser" required>
                     </div>
                 </div>
                 <div class="modal-footer">
