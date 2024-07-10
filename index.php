@@ -393,15 +393,14 @@
                     </div>
                 </div>
             </div>
-
             <div class="row mt-4">
                 <div class="col-3">
                     <div class="row">
                         <div class="col-12">
                             <div class="card mb-3" style="max-width: 20rem; background-color: rgba(78, 160, 242);">
-                                <div class="card-header text-white" style="font-size: larger;"><strong>TITULO</strong></div>
+                                <!-- <div class="card-header text-white" style="font-size: larger;"><strong>TITULO</strong></div> -->
                                 <div class="card-body">
-                                    <h5 class="card-title text-white">Primary card title</h5>
+                                    <h5 class="card-title text-white">Empleado más Eficiente</h5>
                                     <p class="card-text text-white">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
                             </div>
