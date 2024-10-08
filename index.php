@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en" data-bs-theme="auto">
+<html lang="es" data-bs-theme="auto">
     <head>
         <script src="assets/js/color-modes.js"></script>
         <link rel="icon" type="image/png" href="assets/img/inclusion.ico"/>
@@ -347,7 +347,7 @@
                             <div class="card mb-3" style="width: 100%; height: 100%;">
                                 <div class="card-body mt-3">
                                     <h5 class="card-title strong">Captura de expedientes</h5>
-                                    <p class="card-text text-muted">Expedientes capturados de la semana</p>
+                                    <p class="card-text text-muted">Expedientes capturados durante la semana</p>
                                     <div class="row">
                                         <div class="col-6">
                                             <h1 class="text-start p-3">
@@ -369,7 +369,7 @@
                                     <div class="row mt-5">
                                         <div class="col-6 text-start h1"><i class="bi bi-person-badge border p-2 rounded" style="background-color: #cbe5ff; color: #4ea0f2;"></i></div>
                                         <div class="col-6">
-                                            <p class="card-text h1 pe-2" style="color: #4ea0f2;"><span id="filasTar"></span></p>
+                                            <p class="card-text h3 pe-2" style="color: #4ea0f2;"><span id="filasTar"></span></p>
                                             <p class=""><small class="text-success">(<i class="bi bi-arrow-up"></i> 33.3%)</small></p>
                                         </div>
                                     </div>
@@ -383,8 +383,11 @@
                                     <div class="row mt-5">
                                         <div class="col-6 text-start h1"><i class="bi bi-credit-card-2-front-fill border p-2 rounded" style="background-color: #cbe5ff; color: #4ea0f2;"></i></div>
                                         <div class="col-6">
-                                            <p class="card-text h1 pe-2" style="color: #4ea0f2;"><span id="credEnt"></span></p>
+                                            <p class="card-text h3 pe-2" style="color: #4ea0f2;"><span id="credEnt"></span></p>
                                             <p class=""><small class="text-success">(<i class="bi bi-arrow-up"></i> 54.3%)</small></p>
+                                        </div>
+                                        <div class="col-12 justify-content-center">
+                                            <p class=""><small class="text-secondary"><i class="bi bi-list-columns-reverse me-2"></i> Reportes</small></p>
                                         </div>
                                     </div>
                                 </div>
