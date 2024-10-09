@@ -12,32 +12,33 @@
                     <input name="id" id="idHidden" value="" hidden>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-person"></i></span>
-                        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" value="" aria-describedby="basic-addon1" name="nombre" required>
+                        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" id="nombreEditar" value="" aria-describedby="basic-addon1" name="nombre" required>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-workspace"></i></span>
-                        <input type="text" class="form-control" placeholder="Usuario" aria-label="usuario" value="" aria-describedby="basic-addon1"  name="username" readonly>
+                        <input type="text" class="form-control" placeholder="Usuario" aria-label="usuario" value="" id="userEditar" aria-describedby="basic-addon1"  name="username" readonly>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1" for="inputGroupSelect01">Perfil</span>
 
-                        <select class="form-select" id="inputGroupSelect01" value="" selected="selected" name="perfilselect">
+                        <select class="form-select" id="perfilEditar" value="" selected="selected" name="perfilselect">
                             <option value="1">Administrador</option>
                             <option value="2">Usuario</option>
                         </select>
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                            <input type="radio" class="btn-check" value="1" name="btnradio" id="btnradio1">
-                            <label class="btn btn-outline-success" for="btnradio1"><i class="bi bi-check-lg"></i> Activo</label>
-                            <input type="radio" class="btn-check" value="2" name="btnradio" id="btnradio2">
-                            <label class="btn btn-outline-danger" for="btnradio2"><i class="bi bi-x-lg"></i> Inactivo</label>
+                            <input type="radio" class="btn-check" value="1" name="btnradio" id="estatus1">
+                            <label class="btn btn-outline-success" for="estatus1"><i class="bi bi-check-lg"></i> Activo</label>
+                            <input type="radio" class="btn-check" value="2" name="btnradio" id="estatus2">
+                            <label class="btn btn-outline-danger" for="estatus2"><i class="bi bi-x-lg"></i> Inactivo</label>
                         </div>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-shield-lock-fill"></i></span>
                         <input type="password" class="form-control" placeholder="Contraseña" aria-label="contraseña" value="" aria-describedby="basic-addon1" name="pwd" id="passW">
-                        <input type="checkbox" class="form-check-input btn-check" id="eyePwd" onclick="myFunction()">
-                        <label class="btn btn-secondary" for="btn-check"><i class="bi bi-eye"></i></label>
-
+                        <button class="btn btn-primary" type="button" id="btnShowPwd" onclick="myFunction()">
+                            <svg class="bi" width="1.5em" height="1.5em" id="ojocerradoIcon"><use href="#ojoCerrado"></use></svg>
+                            <i class="bi bi-eye" id="ojoabiertoIcon" hidden></i>
+                        </button>
                     </div>
                     <!-- <input type="checkbox" > Mostrar Password  -->
                 </div>

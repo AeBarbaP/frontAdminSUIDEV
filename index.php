@@ -166,6 +166,9 @@
             <symbol id="menu" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
             </symbol>
+            <symbol id="ojoCerrado" viewBox="0 0 256 256">
+                <path d="M230.8877,162.8125a7.99959,7.99959,0,1,1-13.85547,8L198.6499,138.97412a123.56028,123.56028,0,0,1-35.28808,16.27832l5.813,32.96436a8.00173,8.00173,0,0,1-6.48925,9.26855,8.13106,8.13106,0,0,1-1.39942.12207,8.00278,8.00278,0,0,1-7.86914-6.61133l-5.71826-32.42724a136.26072,136.26072,0,0,1-39.4873-.01367l-5.71729,32.42724a8.00272,8.00272,0,0,1-7.86914,6.61231,8.12,8.12,0,0,1-1.39844-.12207,8.00124,8.00124,0,0,1-6.49023-9.26758l5.81445-32.978A123.57956,123.57956,0,0,1,57.3064,138.94531l-18.49,32.02539a7.99959,7.99959,0,1,1-13.85547-8l19.49731-33.77a147.761,147.761,0,0,1-18.68188-19.29834A7.99972,7.99972,0,1,1,38.22168,99.84766a128.70627,128.70627,0,0,0,21.24561,20.92285c.06274.04492.12011.09424.18115.14062A109.59068,109.59068,0,0,0,128,144a109.58952,109.58952,0,0,0,68.3374-23.07861c.05225-.03955.10156-.08155.15528-.11963a128.72532,128.72532,0,0,0,21.28466-20.9541,7.99973,7.99973,0,0,1,12.44532,10.05468,147.78919,147.78919,0,0,1-18.72144,19.333Z"/>
+            </symbol>
         </svg>
 
         <nav class="navbar bg-light" aria-label="Light offcanvas navbar">
@@ -295,6 +298,11 @@
                     <ul class="dropdown-menu text-end">
                         <li><a class="dropdown-item" href="#">Reportes de Beneficiarios <i class="bi bi-folder2-open ms-2" style="font-size: 25px;"></i></a></li>
                         <li><a class="dropdown-item" href="#">Reportes de Apoyos <i class="bi bi-clipboard2-check ms-2" style="font-size: 25px;"></i></a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Reporte de Tarjetones <i class="bi bi-person-badge ms-2" style="font-size: 25px;"></i></a></li>
+                        <li><a class="dropdown-item" href="#">Reporte de Credenciales <i class="bi bi-person-vcard ms-2" style="font-size: 25px;"></i></a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>

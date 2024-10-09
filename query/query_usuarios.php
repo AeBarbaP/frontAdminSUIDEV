@@ -16,6 +16,11 @@
     while($row = $resultadoQueryUsers->fetch_assoc()){
 
         $idLogIn = $row['id'];
+        $nombre = $row['nombre'];
+        $username = $row['username'];
+        $pwd = $row['pwd'];
+        $estatus = $row['estatus'];
+
 
         $sqlLogIn ="SELECT * FROM log_usrlogin WHERE id_usr = '$idLogIn' ORDER BY fecha_iniciosesion DESC LIMIT 1";
         $resultadoLogIn = $conn->query($sqlLogIn);
@@ -37,7 +42,7 @@
 
         echo'
         <tr>
-            <th scope="row"><a style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#editar"><i class="bi bi-three-dots-vertical"></i></a></th>
+            <th scope="row"><a style="text-decoration: none;" onclick="editarUsuario('.$idLogIn.',\''.$nombre.'\',\''.$username.'\',\''.$pwd.'\','.$estatus.','.$perfil.')"><i class="bi bi-three-dots-vertical"></i></a></th>
             <td>'.$rowPerfil['perfil'].'</td>
             <td>'.$row['fecha_creacion'].'</td>
             <td>'.$fecha_ini.'</td>  /* ultimo login */
